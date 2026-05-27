@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>King Kebap Pizza Haus Kuchl – Seit 2003</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-king">KING</span>
+      <span class="logo-kebap">KEBAP</span>
+    </a>
+    <button class="burger" id="burgerBtn" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#pizza">Pizza</a></li>
+      <li><a href="#speisen">Speisen</a></li>
+      <li><a href="#getraenke">Getränke</a></li>
+      <li><a href="#info">Kontakt</a></li>
+      <li><a href="tel:066418527 12" class="nav-cta">Bestellen</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Herzlich Willkommen bei</p>
+    <h1 class="hero-title">
+      <span>King Kebap</span>
+      <span class="hero-subtitle-line">Pizza Haus</span>
+    </h1>
+    <p class="hero-since">Seit 2003 · Kuchl, Österreich</p>
+    <div class="hero-actions">
+      <a href="#pizza" class="btn-primary">Zur Speisekarte</a>
+      <a href="tel:0664185 2712" class="btn-ghost">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Anrufen
+      </a>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-dot"></div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS BAR -->
+<div class="highlights-bar">
+  <div class="highlights-inner">
+    <div class="highlight">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div>
+        <strong>Öffnungszeiten</strong>
+        <span>Sommer 09–22 Uhr · Winter 09–21:30 Uhr</span>
+      </div>
+    </div>
+    <div class="highlight">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <div>
+        <strong>Telefon</strong>
+        <span>0664 185 27 12</span>
+      </div>
+    </div>
+    <div class="highlight">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div>
+        <strong>Adresse</strong>
+        <span>Brennhoflehen, Kellau 151, 5431 Kuchl</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MENU SECTION INTRO -->
+<section class="section-intro">
+  <h2>Unsere Speisekarte</h2>
+  <p>50 hausgemachte Pizzen, frische Kebap-Spezialitäten & mehr – täglich frisch für Sie zubereitet.</p>
+  <div class="category-tabs" id="categoryTabs">
+    <button class="tab active" data-target="pizza">Pizza</button>
+    <button class="tab" data-target="speisen">Speisen & Kebap</button>
+    <button class="tab" data-target="getraenke">Getränke</button>
+  </div>
+</section>
+
+<!-- PIZZA SECTION -->
+<section id="pizza" class="menu-section">
+  <div class="section-header">
+    <div class="section-badge">Klassiker</div>
+    <h2 class="section-title">Pizza</h2>
+    <p class="section-desc">Alle Pizzen auf Tomatensauce & Mozzarella – mit Zutaten A, G, L</p>
+  </div>
+
+  <div class="filter-bar" id="pizzaFilter">
+    <button class="filter-btn active" data-filter="all">Alle</button>
+    <button class="filter-btn" data-filter="vegetarisch">Vegetarisch</button>
+    <button class="filter-btn" data-filter="fisch">Mit Fisch</button>
+    <button class="filter-btn" data-filter="fleisch">Mit Fleisch</button>
+  </div>
+
+  <div class="menu-grid" id="pizzaGrid">
+    <!-- JS rendered -->
+  </div>
+</section>
+
+<!-- SPEISEN SECTION -->
+<section id="speisen" class="menu-section">
+  <div class="section-header">
+    <div class="section-badge">Orientalisch</div>
+    <h2 class="section-title">Speisen & Kebap</h2>
+    <p class="section-desc">Frisch zubereitete Kebap-Spezialitäten, Burger & mehr</p>
+  </div>
+  <div class="menu-grid" id="speisenGrid">
+    <!-- JS rendered -->
+  </div>
+</section>
+
+<!-- GETRÄNKE SECTION -->
+<section id="getraenke" class="menu-section">
+  <div class="section-header">
+    <div class="section-badge">Kalt & Frisch</div>
+    <h2 class="section-title">Getränke</h2>
+    <p class="section-desc">Erfrischende Getränke zu Ihrer Mahlzeit</p>
+  </div>
+  <div class="getraenke-grid" id="getraenkeGrid">
+    <!-- JS rendered -->
+  </div>
+</section>
+
+<!-- INFO / KONTAKT -->
+<section id="info" class="info-section">
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <h3>Öffnungszeiten</h3>
+      <div class="hours-grid">
+        <span>Sommer</span><span>09:00 – 22:00 Uhr</span>
+        <span>Winter</span><span>09:00 – 21:30 Uhr</span>
+      </div>
+    </div>
+    <div class="info-card info-card-main">
+      <div class="info-logo-wrap">
+        <span class="big-logo-king">KING</span>
+        <span class="big-logo-kebap">KEBAP</span>
+        <span class="big-logo-sub">Pizza Haus · Seit 2003</span>
+      </div>
+      <p>Wir freuen uns über Ihre Bewertung auf Google!</p>
+      <a href="tel:0664185 2712" class="btn-primary btn-large">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        0664 185 27 12
+      </a>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <h3>Adresse</h3>
+      <p class="address-text">Brennhoflehen<br>Kellau 151<br>5431 Kuchl, Österreich</p>
+      <a href="https://maps.google.com/?q=King+Kebap+Kuchl+Kellau+151+5431" target="_blank" rel="noopener" class="btn-ghost btn-sm">Auf Google Maps öffnen</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-king">KING</span>
+      <span class="logo-kebap">KEBAP</span>
+      <span class="footer-sub">Pizza Haus Kuchl · Seit 2003</span>
+    </div>
+    <p class="footer-copy">© 2025 King Kebap Pizza Haus Kuchl · Alle Rechte vorbehalten</p>
+    <p class="footer-allergens">A = Gluten · G = Milch · L = Sellerie · Allergene auf Anfrage</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
