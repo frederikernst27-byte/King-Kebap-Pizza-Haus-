@@ -367,14 +367,17 @@ a { text-decoration: none; color: inherit; }
 /* Grid wrap / open-close */
 .category-grid-wrap {
   max-height: 0; overflow: hidden;
-  border: 1.5px solid var(--green);
+  border: 1.5px solid transparent;
   border-top: none;
   border-bottom-left-radius: var(--rl);
   border-bottom-right-radius: var(--rl);
   background: var(--cream);
-  transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1);
+  transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1), border-color 0.2s ease;
 }
-.category-grid-wrap.open { max-height: 4000px; }
+.category-grid-wrap.open {
+  max-height: 4000px;
+  border-color: var(--green);
+}
 .category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
@@ -467,8 +470,11 @@ a { text-decoration: none; color: inherit; }
 #speisen .category-toggle { border-color: rgba(255,255,255,0.15); }
 #speisen .category-toggle svg { stroke: rgba(255,255,255,0.4); }
 #speisen .category-grid-wrap {
-  border-color: var(--amber);
+  border-color: transparent;
   background: rgba(255,255,255,0.03);
+}
+#speisen .category-grid-wrap.open {
+  border-color: var(--amber);
 }
 #speisen .menu-card {
   background: rgba(255,255,255,0.06);
@@ -592,6 +598,10 @@ footer { background: var(--green); padding: 44px 40px; border-top: 3px solid var
 .footer-since { font-size: 0.68rem; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; margin-left: 4px; }
 .footer-copy { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
 .footer-allergens { font-size: 0.66rem; color: rgba(255,255,255,0.18); letter-spacing: 0.04em; }
+.footer-links { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+.footer-links a { font-size: 0.72rem; color: rgba(255,255,255,0.35); transition: color var(--t); }
+.footer-links a:hover { color: var(--amber-2); }
+.footer-links span { color: rgba(255,255,255,0.15); font-size: 0.6rem; }
 
 /* ===========================
    RESPONSIVE
