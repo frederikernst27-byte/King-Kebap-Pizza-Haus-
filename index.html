@@ -24,10 +24,14 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#pizza">Pizza</a></li>
-      <li><a href="#speisen">Speisen</a></li>
-      <li><a href="#getraenke">Getränke</a></li>
+      <li><a href="#speisekarte">Speisekarte</a></li>
       <li><a href="#info">Kontakt</a></li>
+      <li>
+        <a href="https://www.lieferando.at/speisekarte/king-kebap-5431-kuchl"
+           target="_blank" rel="noopener" class="nav-lieferando">
+          🛵 Lieferando
+        </a>
+      </li>
       <li><a href="tel:066418527 12" class="nav-cta">Jetzt bestellen</a></li>
     </ul>
   </div>
@@ -35,57 +39,41 @@
 
 <!-- HERO -->
 <section id="hero">
+  <div class="hero-bg-img"></div>
+  <div class="hero-bg-gradient"></div>
   <div class="hero-inner">
-
-    <!-- LEFT -->
     <div class="hero-left">
       <div class="hero-tag">
         <span class="hero-tag-dot"></span>
         Seit 2003 · Kuchl, Österreich
       </div>
-
       <h1 class="hero-title">
         <span class="hero-title-line">KING</span>
-        <span class="hero-title-line hero-title-accent">KEBAP</span>
-        <span class="hero-title-line hero-title-sm">PIZZA HAUS</span>
+        <span class="hero-title-line hero-title-red">KEBAP</span>
+        <span class="hero-title-line hero-title-sub">PIZZA HAUS</span>
       </h1>
-
-      <p class="hero-desc">
-        Hausgemachte Pizzen & frische Kebap-Spezialitäten — täglich aus Kuchl für Sie zubereitet.
-      </p>
-
+      <p class="hero-desc">Hausgemachte Pizzen & frische Kebap-Spezialitäten — täglich aus Kuchl für Sie zubereitet.</p>
       <div class="hero-actions">
-        <a href="#pizza" class="btn-primary">
-          Speisekarte
+        <a href="#speisekarte" class="btn-red">
+          Zur Speisekarte
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="tel:066418527 12" class="btn-outline">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.7 12.7 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.7 12.7 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          0664 185 27 12
+        <a href="https://www.lieferando.at/speisekarte/king-kebap-5431-kuchl"
+           target="_blank" rel="noopener" class="btn-lieferando">
+          🛵 Auf Lieferando bestellen
         </a>
       </div>
-
       <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">50+</span>
-          <span class="stat-label">Pizzen</span>
-        </div>
+        <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Pizzen</span></div>
         <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">20+</span>
-          <span class="stat-label">Jahre</span>
-        </div>
+        <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Jahre</span></div>
         <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">Hausgemacht</span>
-        </div>
+        <div class="stat"><span class="stat-num">7</span><span class="stat-label">Menüs</span></div>
       </div>
     </div>
-
-    <!-- RIGHT -->
     <div class="hero-right">
-      <div class="hero-img-frame">
+      <div class="hero-img-wrap">
+        <div class="hero-img-ring-2"></div>
         <div class="hero-badge" aria-hidden="true">
           <svg viewBox="0 0 120 120" class="badge-ring">
             <path id="badgePath" d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0"/>
@@ -93,113 +81,135 @@
           </svg>
           <span class="badge-star">★</span>
         </div>
-        <img
-          class="hero-img"
+        <div class="hero-img-circle"></div>
+        <img class="hero-img"
           src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=85&auto=format&fit=crop&crop=center"
-          alt="Frische Pizza"
-          loading="eager"
-        />
-        <div class="hero-img-blob"></div>
+          alt="Frische Pizza" loading="eager" />
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track" aria-hidden="true">
-    <span>PIZZA ★</span><span>KEBAP ★</span><span>HAUSGEMACHT ★</span><span>SEIT 2003 ★</span><span>KUCHL ★</span>
-    <span>PIZZA ★</span><span>KEBAP ★</span><span>HAUSGEMACHT ★</span><span>SEIT 2003 ★</span><span>KUCHL ★</span>
-    <span>PIZZA ★</span><span>KEBAP ★</span><span>HAUSGEMACHT ★</span><span>SEIT 2003 ★</span><span>KUCHL ★</span>
-    <span>PIZZA ★</span><span>KEBAP ★</span><span>HAUSGEMACHT ★</span><span>SEIT 2003 ★</span><span>KUCHL ★</span>
+    <span>PIZZA ★</span><span>KEBAP ★</span><span>SALATE ★</span><span>MENÜS ★</span><span>SEIT 2003 ★</span><span>KUCHL ★</span>
+    <span>PIZZA ★</span><span>KEBAP ★</span><span>SALATE ★</span><span>MENÜS ★</span><span>SEIT 2003 ★</span><span>KUCHL ★</span>
+    <span>PIZZA ★</span><span>KEBAP ★</span><span>SALATE ★</span><span>MENÜS ★</span><span>SEIT 2003 ★</span><span>KUCHL ★</span>
+    <span>PIZZA ★</span><span>KEBAP ★</span><span>SALATE ★</span><span>MENÜS ★</span><span>SEIT 2003 ★</span><span>KUCHL ★</span>
   </div>
 </div>
 
-<!-- PIZZA SECTION -->
-<section id="pizza" class="page-section">
-  <div class="section-intro">
-    <div class="section-label">01 — Unsere Pizzen</div>
-    <h2 class="section-heading">PIZZA'S</h2>
-    <p class="section-sub">Alle Pizzen auf Tomatensauce & Mozzarella · A, G, L</p>
-  </div>
-  <div id="pizzaCategories"></div>
-</section>
+<!-- SPEISEKARTE -->
+<section id="speisekarte">
 
-<!-- SPEISEN SECTION -->
-<section id="speisen" class="page-section page-section-dark">
-  <div class="section-intro">
-    <div class="section-label">02 — Kebap & Mehr</div>
-    <h2 class="section-heading">SPEISEN</h2>
-    <p class="section-sub">Frische Kebap-Spezialitäten, Burger & Grillgerichte</p>
-  </div>
-
-  <div class="split-hero">
-    <div class="split-img-wrap">
-      <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=700&q=80&auto=format&fit=crop" alt="Kebap" loading="lazy" />
-      <div class="split-badge">FRISCH<br>TÄGLICH</div>
-    </div>
-    <div class="split-text">
-      <h3>Echter Kebap.</h3>
-      <p>Zart mariniertes Fleisch, frisches Gemüse, hausgemachte Soße — im Brot, als Dürüm oder auf dem Teller.</p>
-      <div class="split-pills">
-        <span>Im Brot ab € 7,00</span>
-        <span>Dürüm ab € 8,00</span>
-        <span>Teller ab € 11,50</span>
+  <!-- Lieferando Banner -->
+  <div class="lieferando-banner">
+    <div class="lieferando-banner-inner">
+      <div class="lieferando-left">
+        <span class="lieferando-emoji">🛵</span>
+        <div>
+          <strong>Auch auf Lieferando bestellbar</strong>
+          <span>King Kebap Kuchl — Lieferung & Abholung</span>
+        </div>
       </div>
+      <a href="https://www.lieferando.at/speisekarte/king-kebap-5431-kuchl"
+         target="_blank" rel="noopener" class="lieferando-btn">
+        Jetzt bestellen →
+      </a>
     </div>
   </div>
 
-  <div id="speisenCategories"></div>
-</section>
+  <div class="sk-layout">
 
-<!-- GETRÄNKE -->
-<section id="getraenke" class="page-section">
-  <div class="section-intro">
-    <div class="section-label">03 — Getränke</div>
-    <h2 class="section-heading">GETRÄNKE</h2>
+    <!-- SIDEBAR -->
+    <aside class="sk-sidebar" id="skSidebar">
+      <div class="sk-search-wrap">
+        <svg class="sk-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input class="sk-search" id="skSearch" type="text" placeholder="Produkt suchen…" autocomplete="off" />
+      </div>
+      <nav class="sk-nav" id="skNav">
+        <a class="sk-nav-link active" href="#sk-menues" data-cat="sk-menues">
+          <span class="sk-nav-icon">🍽️</span> Menüs
+        </a>
+        <a class="sk-nav-link" href="#sk-pizza" data-cat="sk-pizza">
+          <span class="sk-nav-icon">🍕</span> Pizza
+        </a>
+        <a class="sk-nav-link" href="#sk-salate" data-cat="sk-salate">
+          <span class="sk-nav-icon">🥗</span> Salate
+        </a>
+        <a class="sk-nav-link" href="#sk-kebap" data-cat="sk-kebap">
+          <span class="sk-nav-icon">🥙</span> Kebap im Brot
+        </a>
+        <a class="sk-nav-link" href="#sk-duerum" data-cat="sk-duerum">
+          <span class="sk-nav-icon">🌯</span> Dürüm Wrap
+        </a>
+        <a class="sk-nav-link" href="#sk-teller" data-cat="sk-teller">
+          <span class="sk-nav-icon">🍽️</span> Kebap Teller
+        </a>
+        <a class="sk-nav-link" href="#sk-box" data-cat="sk-box">
+          <span class="sk-nav-icon">📦</span> Kebap Box
+        </a>
+        <a class="sk-nav-link" href="#sk-grill" data-cat="sk-grill">
+          <span class="sk-nav-icon">🔥</span> Grill & Burger
+        </a>
+        <a class="sk-nav-link" href="#sk-pommes" data-cat="sk-pommes">
+          <span class="sk-nav-icon">🍟</span> Pommes Frites
+        </a>
+        <a class="sk-nav-link" href="#sk-getraenke" data-cat="sk-getraenke">
+          <span class="sk-nav-icon">🥤</span> Getränke
+        </a>
+      </nav>
+    </aside>
+
+    <!-- MAIN MENU CONTENT -->
+    <main class="sk-main" id="skMain">
+      <!-- Sections rendered by JS -->
+    </main>
+
   </div>
-  <div class="getraenke-grid" id="getraenkeGrid"></div>
 </section>
 
 <!-- KONTAKT -->
 <section id="info" class="page-section info-section">
-  <div class="section-intro">
-    <div class="section-label">04 — Finden Sie uns</div>
-    <h2 class="section-heading">KONTAKT</h2>
-  </div>
-  <div class="info-cards">
-    <div class="info-card">
-      <div class="info-icon">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      </div>
-      <h3>Öffnungszeiten</h3>
-      <div class="hours">
-        <div class="hours-row"><span>Sommer</span><span>09:00 – 22:00 Uhr</span></div>
-        <div class="hours-row"><span>Winter</span><span>09:00 – 21:30 Uhr</span></div>
-      </div>
+  <div class="max-w">
+    <div class="section-intro">
+      <div class="section-label">Finden Sie uns</div>
+      <h2 class="section-heading">KONTAKT</h2>
     </div>
-    <div class="info-card info-card-featured">
-      <div class="info-icon">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.7 12.7 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.7 12.7 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <div class="info-cards">
+      <div class="info-card">
+        <div class="info-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Öffnungszeiten</h3>
+        <div class="hours">
+          <div class="hours-row"><span>Sommer</span><span>09:00 – 22:00 Uhr</span></div>
+          <div class="hours-row"><span>Winter</span><span>09:00 – 21:30 Uhr</span></div>
+        </div>
       </div>
-      <h3>Bestellen</h3>
-      <a href="tel:066418527 12" class="info-phone">0664 185 27 12</a>
-      <p>Telefon oder einfach vorbeikommen</p>
-      <div class="info-stars">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        Auf Google bewerten
+      <div class="info-card info-card-featured">
+        <div class="info-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.7 12.7 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.7 12.7 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>Bestellen</h3>
+        <a href="tel:066418527 12" class="info-phone">0664 185 27 12</a>
+        <p>Telefon oder einfach vorbeikommen</p>
+        <div class="info-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          Auf Google bewerten
+        </div>
       </div>
-    </div>
-    <div class="info-card">
-      <div class="info-icon">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div class="info-card">
+        <div class="info-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Adresse</h3>
+        <p class="info-addr">Brennhoflehen · Kellau 151<br>5431 Kuchl, Österreich</p>
+        <a href="https://maps.google.com/?q=Kellau+151+5431+Kuchl" target="_blank" rel="noopener" class="info-maps">
+          Google Maps öffnen →
+        </a>
       </div>
-      <h3>Adresse</h3>
-      <p class="info-addr">Brennhoflehen · Kellau 151<br>5431 Kuchl, Österreich</p>
-      <a href="https://maps.google.com/?q=Kellau+151+5431+Kuchl" target="_blank" rel="noopener" class="info-maps">
-        Google Maps öffnen →
-      </a>
     </div>
   </div>
 </section>
