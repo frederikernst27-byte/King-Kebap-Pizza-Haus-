@@ -265,7 +265,9 @@ function initScrollSpy() {
         const active = document.querySelector(`.sk-nav-link[data-cat="${entry.target.id}"]`);
         if (active) {
           active.classList.add('active');
-          active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          if (window.innerWidth > 900) {
+            active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          }
         }
       }
     });
