@@ -196,25 +196,70 @@ function renderMenu() {
         <h2 class="sk-section-title">${section.name}</h2>
         ${noteHtml}
       </div>
-      <div class="sk-items"></div>`;
+      <table class="sk-table">
+        <thead>
+          <tr>
+            <th class="sk-th-nr">Nr.</th>
+            <th>Gericht</th>
+            <th class="sk-th-price">Preis</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>`;
 
-    const itemsEl = sec.querySelector('.sk-items');
+    const tbody = sec.querySelector('tbody');
     section.items.forEach(item => {
-      const row = document.createElement('div');
+      const row = document.createElement('tr');
       row.className = 'sk-item';
       row.dataset.search = (item.name + ' ' + item.ing + ' ' + item.nr).toLowerCase();
       row.innerHTML = `
-        <div class="sk-item-nr">${item.nr}</div>
-        <div class="sk-item-body">
+        <td class="sk-item-nr">${item.nr}</td>
+        <td class="sk-item-body">
           <div class="sk-item-name">${item.name}</div>
           <div class="sk-item-ing">${item.ing}</div>
-        </div>
-        <div class="sk-item-price">${fmt(item.p)}</div>`;
-      itemsEl.appendChild(row);
+        </td>
+        <td class="sk-item-price">${fmt(item.p)}</td>`;
+      tbody.appendChild(row);
     });
 
     main.appendChild(sec);
   });
+}
+
+// ==============================
+// CATEGORY SWITCHING (one category visible at a time)
+// ==============================
+
+let activeCategory = null;
+
+function showCategory(catId) {
+  activeCategory = catId;
+  document.querySelectorAll('.sk-section').forEach(sec => {
+    const visible = sec.id === catId;
+    sec.style.display = visible ? '' : 'none';
+    sec.querySelectorAll('.sk-item').forEach(item => { item.style.display = ''; });
+  });
+  document.querySelectorAll('.sk-nav-link').forEach(l => {
+    l.classList.toggle('active', l.dataset.cat === catId);
+  });
+}
+
+function initMenuNav() {
+  const links = document.querySelectorAll('.sk-nav-link');
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById('skSearch').value = '';
+      showCategory(link.dataset.cat);
+      if (window.innerWidth <= 900) {
+        const target = document.getElementById('speisekarte');
+        const offset = 90;
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    });
+  });
+  if (MENU_SECTIONS.length) showCategory(MENU_SECTIONS[0].id);
 }
 
 // ==============================
@@ -225,12 +270,10 @@ function initSearch() {
   const input = document.getElementById('skSearch');
   input.addEventListener('input', () => {
     const q = input.value.trim().toLowerCase();
-    const allItems = document.querySelectorAll('.sk-item');
     const allSections = document.querySelectorAll('.sk-section');
 
     if (!q) {
-      allItems.forEach(el => el.style.display = '');
-      allSections.forEach(el => el.style.display = '');
+      showCategory(activeCategory);
       return;
     }
 
@@ -243,48 +286,6 @@ function initSearch() {
         if (match) anyVisible = true;
       });
       sec.style.display = anyVisible ? '' : 'none';
-    });
-  });
-}
-
-// ==============================
-// SCROLL SPY
-// ==============================
-
-function initScrollSpy() {
-  const sections = document.querySelectorAll('.sk-section');
-  const links = document.querySelectorAll('.sk-nav-link');
-  const main = document.getElementById('skMain');
-
-  if (!main) return;
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        links.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.sk-nav-link[data-cat="${entry.target.id}"]`);
-        if (active) {
-          active.classList.add('active');
-          if (window.innerWidth > 900) {
-            active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-          }
-        }
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-
-  sections.forEach(s => observer.observe(s));
-
-  // Smooth scroll on nav click
-  links.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.getElementById(link.dataset.cat);
-      if (target) {
-        const offset = 90;
-        const y = target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
     });
   });
 }
@@ -308,12 +309,60 @@ function initNavbar() {
 }
 
 // ==============================
+// SLIDESHOW
+// ==============================
+
+function initSlideshow() {
+  const track = document.getElementById('slideTrack');
+  const dotsWrap = document.getElementById('slideDots');
+  const prevBtn = document.getElementById('slidePrev');
+  const nextBtn = document.getElementById('slideNext');
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.slide');
+  let index = 0;
+  let timer = null;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'slide-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Bild ${i + 1}`);
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  function update() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dotsWrap.querySelectorAll('.slide-dot').forEach((d, i) => d.classList.toggle('active', i === index));
+  }
+
+  function goTo(i) {
+    index = (i + slides.length) % slides.length;
+    update();
+    restart();
+  }
+
+  function next() { goTo(index + 1); }
+  function prev() { goTo(index - 1); }
+
+  function restart() {
+    clearInterval(timer);
+    timer = setInterval(() => { index = (index + 1) % slides.length; update(); }, 5000);
+  }
+
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+  restart();
+}
+
+// ==============================
 // INIT
 // ==============================
 
 document.addEventListener('DOMContentLoaded', () => {
   renderMenu();
   initSearch();
-  initScrollSpy();
+  initMenuNav();
   initNavbar();
+  initSlideshow();
 });
