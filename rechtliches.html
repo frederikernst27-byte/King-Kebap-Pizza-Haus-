@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rechtliches & Infos – King Kebap Pizza Haus Kuchl</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .overview-page { max-width: 900px; margin: 0 auto; padding: 140px 40px 80px; }
+    .overview-back { display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; font-weight: 600; color: var(--muted); margin-bottom: 48px; transition: color var(--t); }
+    .overview-back:hover { color: var(--text); }
+    .overview-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+    .overview-eyebrow::before { content: ''; display: block; width: 20px; height: 2px; background: var(--red); border-radius: 2px; }
+    .overview-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; color: var(--text); letter-spacing: -0.03em; margin-bottom: 56px; line-height: 0.95; }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 48px; }
+
+    .card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color var(--t), transform var(--t);
+      text-decoration: none;
+    }
+    .card:hover { border-color: var(--red); transform: translateY(-2px); }
+    .card-icon { font-size: 1.6rem; line-height: 1; }
+    .card-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+    .card-title { font-family: var(--font-display); font-size: 1.25rem; font-weight: 900; color: var(--text); letter-spacing: -0.02em; }
+    .card-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; flex: 1; }
+    .card-arrow { font-size: 0.8rem; font-weight: 700; color: var(--red); margin-top: 4px; }
+
+    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .info-tile { background: var(--surface); border: 1.5px solid var(--border); border-radius: 16px; padding: 24px; }
+    .info-tile h3 { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .info-tile p, .info-tile a { font-size: 0.9rem; color: var(--text); line-height: 1.7; }
+    .info-tile a { color: var(--green); font-weight: 600; }
+    .info-tile a:hover { color: var(--red); }
+    .info-tile .badge { display: inline-block; font-size: 0.7rem; font-weight: 700; background: var(--red); color: #fff; border-radius: 6px; padding: 2px 8px; margin-top: 8px; }
+
+    .section-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; margin-top: 48px; display: flex; align-items: center; gap: 10px; }
+    .section-label::before { content: ''; display: block; width: 20px; height: 2px; background: var(--red); border-radius: 2px; }
+
+    @media (max-width: 600px) { .overview-page { padding: 100px 20px 60px; } }
+  </style>
+</head>
+<body>
+
+<nav id="navbar" class="scrolled">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-crown">♛</span>
+      <div class="logo-lines">
+        <span class="logo-king">KING</span>
+        <span class="logo-kebap">KEBAP</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#speisekarte">Speisekarte</a></li>
+      <li><a href="index.html#info">Kontakt</a></li>
+      <li><a href="tel:066418527 12" class="nav-cta">Jetzt bestellen</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="overview-page">
+
+  <a href="index.html" class="overview-back">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Zurück zur Startseite
+  </a>
+
+  <div class="overview-eyebrow">Rechtliches & Infos</div>
+  <h1 class="overview-title">Alles auf<br>einen Blick</h1>
+
+  <!-- Rechtliche Dokumente -->
+  <div class="section-label">Rechtliche Dokumente</div>
+  <div class="cards">
+    <a href="impressum.html" class="card">
+      <div class="card-icon">🏛️</div>
+      <div class="card-label">Pflichtangaben</div>
+      <div class="card-title">Impressum</div>
+      <div class="card-desc">Angaben gemäß § 5 ECG: Betreiber, Adresse, Kontakt, Haftungsausschluss.</div>
+      <div class="card-arrow">Öffnen →</div>
+    </a>
+    <a href="datenschutz.html" class="card">
+      <div class="card-icon">🔒</div>
+      <div class="card-label">DSGVO</div>
+      <div class="card-title">Datenschutz</div>
+      <div class="card-desc">Keine Cookies, kein Tracking, keine externen Ressourcen. Alle Daten bleiben auf dem eigenen Server.</div>
+      <div class="card-arrow">Öffnen →</div>
+    </a>
+  </div>
+
+  <!-- Infos -->
+  <div class="section-label">Infos zum Betrieb</div>
+  <div class="info-grid">
+    <div class="info-tile">
+      <h3>Adresse</h3>
+      <p>King Kebap Pizza Haus Kuchl<br>Brennhoflehen · Kellau 151<br>5431 Kuchl, Österreich</p>
+      <a href="https://maps.google.com/?q=Kellau+151+5431+Kuchl" target="_blank" rel="noopener">Google Maps →</a>
+    </div>
+    <div class="info-tile">
+      <h3>Kontakt</h3>
+      <p><a href="tel:066418527 12">0664 185 27 12</a></p>
+      <p>Telefon oder persönlich vorbeikommen</p>
+    </div>
+    <div class="info-tile">
+      <h3>Öffnungszeiten</h3>
+      <p>Sommer: täglich 09:00 – 22:00<br>Winter: täglich 09:00 – 21:30</p>
+    </div>
+    <div class="info-tile">
+      <h3>Online bestellen</h3>
+      <p><a href="https://www.lieferando.at/speisekarte/king-kebap-5431-kuchl" target="_blank" rel="noopener">Lieferando.at →</a></p>
+      <p>Lieferung & Abholung</p>
+    </div>
+    <div class="info-tile">
+      <h3>Datenschutz-Status</h3>
+      <p>Keine Cookies · Kein Tracking · Schriftarten & Bilder selbst gehostet</p>
+      <span class="badge">DSGVO-konform</span>
+    </div>
+    <div class="info-tile">
+      <h3>Seit</h3>
+      <p style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 900; color: var(--text); line-height: 1;">2003</p>
+      <p>Kuchl, Österreich</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-crown">♛</span>
+      <div class="logo-lines">
+        <span class="logo-king">KING</span>
+        <span class="logo-kebap">KEBAP</span>
+      </div>
+      <span class="footer-since">Pizza Haus Kuchl · Seit 2003</span>
+    </div>
+    <p class="footer-copy">© 2025 King Kebap Pizza Haus Kuchl · Alle Rechte vorbehalten</p>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <span>·</span>
+      <a href="datenschutz.html">Datenschutz</a>
+      <span>·</span>
+      <a href="rechtliches.html">Übersicht</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
